@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release for the exact version used."
+title: "AsymptoticAssembly"
+type: software
+authors:
+  - family-names: "Irving"
+    given-names: "Bryen"
+version: "0.1.0.dev0"
+date-released: "2026-08-27"
+repository-code: "https://github.com/beirving4/AsymptoticAssembly-public"
+license: "MIT"
+abstract: >-
+  Scientific Python tools for analyzing asymptotic assembly histories,
+  abundance, density fields, particle properties, and merger-tree structure
+  in cosmological N-body simulations.
+

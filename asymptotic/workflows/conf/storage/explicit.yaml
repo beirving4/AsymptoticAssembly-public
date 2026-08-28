@@ -1,0 +1,11 @@
+# Explicit portable paths only. A private configuration directory supplies its
+# own option in this group; nothing here is discovered.
+sim_data_dir: ???
+full_catalog_dir: null
+power_spectra_dir: null
+analysis_dir: null
+tree_order_path: null
+prog_order_path: null
+full_tree_path: null
+raw_tree_data_path: null
+use_tree: false

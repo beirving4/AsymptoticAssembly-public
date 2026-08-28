@@ -1,0 +1,18 @@
+# Public root configuration. Every value here is neutral: user-required
+# entries are '???' rather than an invented path.
+defaults:
+  - simulation: default
+  - output: local
+  - compute: default
+  - workflow: merge_boundary_caustics
+  - _self_
+
+schema_version: 1
+
+# Optional groups (cosmology, resolution, storage) are absent by default:
+# a workflow that needs one declares it in the registry, and a private or
+# user configuration directory supplies it.
+
+hydra:
+  job:
+    chdir: false

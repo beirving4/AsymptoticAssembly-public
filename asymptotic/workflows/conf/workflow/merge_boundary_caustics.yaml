@@ -1,0 +1,3 @@
+name: merge_boundary_caustics
+root_halo_id: ???
+method: tessellation

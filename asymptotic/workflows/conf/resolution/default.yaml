@@ -1,0 +1,3 @@
+min_resolved_particles: ???
+# null selects the pure derivation from seed_num
+link_fraction: null

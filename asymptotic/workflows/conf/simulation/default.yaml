@@ -1,0 +1,4 @@
+box_size: ???
+num_particles: 512
+seed_num: 1
+is_batched: false

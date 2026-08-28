@@ -1,0 +1,4 @@
+# Neutral template: a workflow that reads cosmology selects this group and
+# supplies both values. param_path is only consumed by the named modes.
+name: ???
+param_path: null

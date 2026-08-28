@@ -1,0 +1,107 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asymptotic-assembly"
+version = "0.1.0.dev0"
+description = "Analysis of asymptotic assembly histories of dark matter halos in cosmological N-body simulations"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Bryen Irving" }]
+requires-python = ">=3.12"
+# Core reflects the eager imports of the central modules (cosmo, simulation,
+# mass_def, utils.get_data). matplotlib remains core until the plotting
+# decomposition demotes it. ytree and yt are no longer runtime dependencies:
+# deprecated legacy arbor tooling lazy-imports ytree only when explicitly
+# invoked, and is not part of the core installation.
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.15",
+    "h5py>=3.12",
+    "attrs>=24.2",
+    "astropy>=6.1",
+    "colossus>=1.3.6",
+    "tqdm>=4.66",
+    "matplotlib>=3.10",
+]
+
+[project.optional-dependencies]
+# Compiled clustering backends for fields.two_point / fields.correlation.
+clustering = ["corrfunc>=2.5", "treecorr>=5.1"]
+# Field tooling: mcfit transforms (fields.correlation / fields.power).
+fields = ["mcfit>=0.0.22"]
+# JIT kernels for distribution.helpers / distribution.phase_space.
+profiles = ["numba>=0.60"]
+# seaborn for particles.viz (imported by particles.collection).
+viz = ["seaborn>=0.13"]
+# Composed workflow configuration (asymptotic-run). omegaconf is declared
+# explicitly because asymptotic.workflows imports it directly rather than
+# relying on it arriving transitively through hydra-core.
+workflows = [
+    "hydra-core>=1.3.2,<2",
+    "omegaconf>=2.3,<3",
+]
+
+[project.scripts]
+asymptotic-run = "asymptotic.workflows.cli:main"
+
+[dependency-groups]
+test = ["pytest>=8.3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# Excluded from public artifacts: deprecated trees, private cluster-layout
+# resolvers, research orchestration, and development-only utilities.
+[tool.hatch.build.targets.wheel]
+packages = ["asymptotic"]
+exclude = [
+    "asymptotic/analysis_old",
+    "asymptotic/mass_function_old",
+    "asymptotic/.graphifyignore",
+    "asymptotic/analysis",
+    "asymptotic/utils/directory_finder.py",
+    "asymptotic/utils/code_profiler.py",
+    "asymptotic/studies/config.py",
+    "asymptotic/studies/convergence.py",
+    "asymptotic/studies/cosmo.py",
+    "asymptotic/studies/dataloader.py",
+    "asymptotic/studies/initialize.py",
+    "asymptotic/studies/io.py",
+    "asymptotic/studies/resolution.py",
+    "asymptotic/studies/variance.py",
+    "asymptotic/studies/mass_function",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "asymptotic",
+    "CITATION.cff",
+    "LICENSE",
+    "README.md",
+    "RELEASE_STATUS.md",
+    "pyproject.toml",
+]
+exclude = [
+    "asymptotic/analysis_old",
+    "asymptotic/mass_function_old",
+    "asymptotic/.graphifyignore",
+    "asymptotic/analysis",
+    "asymptotic/utils/directory_finder.py",
+    "asymptotic/utils/code_profiler.py",
+    "asymptotic/studies/config.py",
+    "asymptotic/studies/convergence.py",
+    "asymptotic/studies/cosmo.py",
+    "asymptotic/studies/dataloader.py",
+    "asymptotic/studies/initialize.py",
+    "asymptotic/studies/io.py",
+    "asymptotic/studies/resolution.py",
+    "asymptotic/studies/variance.py",
+    "asymptotic/studies/mass_function",
+    "postprocessing",
+    "slurm",
+    "tests",
+    "docs",
+]
