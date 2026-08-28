@@ -1,5 +1,7 @@
 # AsymptoticAssembly
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22136688.svg)](https://doi.org/10.5281/zenodo.22136688)
+
 AsymptoticAssembly is a Python package for studying the assembly histories,
 mass evolution, density fields, abundance, and merger-tree structure of dark
 matter halos in cosmological N-body simulations.
@@ -73,9 +75,10 @@ not claimed complete here.
 
 ## Citation
 
-Zenodo citation metadata and the DOI will be attached to the GitHub release.
-Until then, cite the repository and the exact version tag. A machine-readable
-`CITATION.cff` is included.
+The archived thesis alpha is available at
+[doi:10.5281/zenodo.22136688](https://doi.org/10.5281/zenodo.22136688).
+Please cite the exact version used. A machine-readable `CITATION.cff` is
+included.
 
 ## Contributing
 

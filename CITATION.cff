@@ -6,6 +6,7 @@ authors:
   - family-names: "Irving"
     given-names: "Bryen"
 version: "0.1.0a0"
+doi: "10.5281/zenodo.22136688"
 date-released: "2026-08-27"
 repository-code: "https://github.com/beirving4/AsymptoticAssembly-public"
 license: "MIT"

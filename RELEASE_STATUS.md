@@ -16,3 +16,5 @@ following release-hardening work remains in progress:
 
 These limitations do not change the immutable contents of this tagged
 checkpoint. Future improvements will be released under new version tags.
+
+The archived release DOI is `10.5281/zenodo.22136688`.
