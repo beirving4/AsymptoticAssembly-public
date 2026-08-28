@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Irving"
     given-names: "Bryen"
-version: "0.1.0.dev0"
+version: "0.1.0a0"
 date-released: "2026-08-27"
 repository-code: "https://github.com/beirving4/AsymptoticAssembly-public"
 license: "MIT"
@@ -13,4 +13,3 @@ abstract: >-
   Scientific Python tools for analyzing asymptotic assembly histories,
   abundance, density fields, particle properties, and merger-tree structure
   in cosmological N-body simulations.
-

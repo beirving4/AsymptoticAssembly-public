@@ -12,7 +12,7 @@ deposit; the current release is therefore marked as a pre-release.
 
 ## Status
 
-- Version: `0.1.0.dev0`
+- Version: `0.1.0a0`
 - Python: 3.12 or newer
 - License: MIT
 - Release stage: thesis pre-release

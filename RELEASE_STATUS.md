@@ -4,7 +4,7 @@ This repository is a citable public checkpoint prepared for the associated
 thesis deposit. It separates the portable scientific package from private
 research infrastructure and cluster-specific post-processing code.
 
-The `v0.1.0.dev0` release is intentionally a pre-release. Focused scientific
+The `v0.1.0a0` release is intentionally a pre-release. Focused scientific
 regression suites used during the publication cleanup pass locally. The
 following release-hardening work remains in progress:
 

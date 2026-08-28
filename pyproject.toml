@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "asymptotic-assembly"
-version = "0.1.0.dev0"
+version = "0.1.0a0"
 description = "Analysis of asymptotic assembly histories of dark matter halos in cosmological N-body simulations"
 readme = "README.md"
 license = "MIT"
